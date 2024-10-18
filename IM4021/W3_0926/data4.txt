@@ -1,0 +1,7 @@
+fff,-5
+aaa,53
+bbb,30
+ccc,44
+ddd,95
+eee,30
+ggg,-7

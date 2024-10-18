@@ -1,0 +1,5 @@
+alice,25
+bob,23
+ccc,22.5
+ddd,20
+eee,40
