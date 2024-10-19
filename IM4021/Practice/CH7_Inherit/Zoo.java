@@ -12,12 +12,14 @@ abstract class Animal{
 }
 
 class Dog extends Animal{
+    @Override
     public String makeSound(){
         return "bark";
     }
 }
 
 class Cat extends Animal{
+    @Override
     public String makeSound(){
         return "meow";
     }

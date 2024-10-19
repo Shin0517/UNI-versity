@@ -1,6 +1,9 @@
 package Practice.CH7_Inherit;
 
-// functions can still be call or inherit between different file under same package using "protected"
+/*
+functions can still be called or inherited 
+between different files under same package using `protected`
+*/
 class CMath{
     protected void getMax(int a, int b){
         int max;

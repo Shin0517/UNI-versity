@@ -35,6 +35,7 @@ class SonCScore extends CScore{
         this.eng = eng;
     }
 
+    @Override
     public void showScore(){
         super.showScore(); // call function from superclass
         System.out.print("\t English: " + this.eng);
