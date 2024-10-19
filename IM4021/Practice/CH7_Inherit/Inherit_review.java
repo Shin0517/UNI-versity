@@ -34,6 +34,7 @@ class SonCScore extends CScore{
         this.math = math;
     }
 
+    @Override
     public void showScore(){
         super.showScore();
         System.out.print("\t Math: " + this.math);
