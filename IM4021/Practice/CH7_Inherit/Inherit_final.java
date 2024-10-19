@@ -12,12 +12,6 @@ class PiliCar extends Ccar{
     //     System.out.println("The max speed of " + s + " is " + speed);
     // }
 }
-/*
-This method cannot be overridden 
-since the superclass of PiliCar, Ccar, use "final"
-Only if the parameter is different with what is used in Ccar.showBigSpeed()
- */
-
 
 public class Inherit_final {
     public static void main(String[] args) {

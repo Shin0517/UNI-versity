@@ -7,8 +7,6 @@ interface IMove{
 
 class PiliCar implements IMove{
     private int speed;
-
-    @Override
     public void addSpeed(int s){
         System.out.println("The original speed of PiliCar is: " + speed);
         speed += s;
@@ -18,8 +16,6 @@ class PiliCar implements IMove{
 
 class BMXCar implements IMove{
     private int speed;
-    
-    @Override
     public void addSpeed(int s){
         System.out.println("The original speed of BMXCar is: " + speed);
         speed += s;

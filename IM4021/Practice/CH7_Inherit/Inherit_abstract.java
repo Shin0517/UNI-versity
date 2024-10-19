@@ -16,7 +16,6 @@ class SimpleAvg extends CScore{
         super(chia, math);
     }
 
-    @Override
     public double avgScore(){
         return (float) (chia + math) / 2;
     }
@@ -31,7 +30,6 @@ class WeightAvg extends CScore{
         this.w2 = w2;
     }
 
-    @Override
     public double avgScore(){
         return (double) (chia*w1 + math*w2) / (w1 + w2);
     }

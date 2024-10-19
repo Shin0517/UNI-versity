@@ -12,7 +12,6 @@ class CMath{
 }
 
 class SonCMath extends CMath{
-    @Override
     protected void getMax(int a, int b){
         if(a > b)
             System.out.println("The maximum number between " + a + " and " + b +" is " + a);
