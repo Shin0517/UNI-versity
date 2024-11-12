@@ -1,0 +1,124 @@
+import unittest
+from name_function import get_formatted_name
+
+class NameTestCase(unittest.TestCase):
+    def test_first_last(self):
+        formatted_name=get_formatted_name("taylor","swift")
+        self.assertEqual(formatted_name, "Taylor Swift")
+        
+    def test_first_last_middle(self):
+        formatted_name=get_formatted_name("taylor","swift","alison")
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+
+import unittest
+from city_function import get_complete_location
+
+class CityTestCase(unittest.TestCase):
+    def test_city_country(self):
+        complete_location=get_complete_location("la","america")
+        self.assertEqual(complete_location,"La, America")
+
+    def test_city_country_population(self):
+        complete_location=get_complete_location("la","america",population=50)
+        self.assertEqual(complete_location,"La, America -- population 50")
+        
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+from survey import AnonymousSurvey
+
+question='How old are you?\n'
+survey_0=AnonymousSurvey(question)
+
+survey_0.show_question()
+print("press 'q' to quit the program anytime.")
+while True:
+    response=input("Age: ")
+    if response != 'q':
+        survey_0.collect_respond(response)
+    else:
+        break
+    
+print("\nThanks for providing the answers.")
+survey_0.show_respond()
+
+
+
+import unittest
+from survey import AnonymousSurvey
+
+class SurveyTestCase(unittest.TestCase):
+    def setUp(self):
+        """
+        create survey and response used in following test methods
+        """
+        question="What language can you speak?"
+        self.survey=AnonymousSurvey(question)
+        self.responses=["English","Chinese","Spanish"]
+
+    def test_single_response(self):
+        """
+        test if the function store single input value
+        """
+        self.survey.collect_response(self.responses[0])
+        self.assertIn(self.responses[0],self.survey.response)
+    
+    def test_three_response(self):
+        """
+        test if the function store multiple input value
+        (take three for example)
+        """
+        for response in self.responses:
+            self.survey.collect_response(response)
+        for response in self.responses:
+            self.assertIn(response,self.survey.response)
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+
+class Employee:
+    def __init__(self, first_name, last_name, year_salary):
+        self.first_name=first_name
+        self.last_name=last_name
+        self.year_salary=year_salary
+    
+    def give_raise(self, give_raise=5_000):
+        self.year_salary += give_raise
+        
+
+
+import unittest
+from employee import Employee
+
+class RaiseTestCase(unittest.TestCase):
+    def setUp(self):
+        """
+        provide info used in following test case
+        """
+        self.my_employee=Employee('yen','chia-shin',600_000_000)
+
+    def test_give_default_raise(self):
+        """
+        test if the function "give_raise()" raise year salary to expected value
+        """
+        self.my_employee.give_raise()
+        self.assertEqual(600_005_000,self.my_employee.year_salary)
+    
+    def test_give_custom_raise(self):
+        """
+        test if the custom value add on year salary correctly
+        """
+        self.my_employee.give_raise(10_000)
+        self.assertEqual(600_010_000,self.my_employee.year_salary)
+    
+if __name__ == "__main__":
+    unittest.main()
