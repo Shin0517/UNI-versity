@@ -4,7 +4,7 @@ class Settings:
         game screen settings
         """
         self.screen_width=1200
-        self.screen_height=800
+        self.screen_height=700
         self.bg_color=(200,200,200)
         self.bullets_allowed=3
         
@@ -25,5 +25,5 @@ class Settings:
         """
         self.bullet_width=3
         self.bullet_height=15
-        self.bullet_color=(60,60,60)
+        self.bullet_color=(255,60,60)
         self.bullet_speed=1.5       
